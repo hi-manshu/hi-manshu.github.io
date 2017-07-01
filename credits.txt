@@ -1,0 +1,66 @@
+
+-----
+CREDITS :
+
+Bootstrap
+http://getbootstrap.com/
+
+jQuery
+http://jquery.com/
+
+Animate.css
+https://daneden.github.io/animate.css/
+
+Animated Headlines
+https://codyhouse.co/demo/animated-headlines/index.html
+
+Waypoints
+http://imakewebthings.com/waypoints/
+
+Viewport Selectors for jQuery
+http://www.appelsiini.net/projects/viewport
+
+Fluidbox Plugin
+https://github.com/terrymun/Fluidbox
+
+Magnific-Popup
+https://github.com/dimsemenov/Magnific-Popup
+
+Selection Sharer
+https://github.com/xdamman/selection-sharer
+
+Isotope
+http://isotope.metafizzy.co/
+
+Social-Photo-Stream-jQuery-Plugin
+https://github.com/pixel-industry/Social-Photo-Stream-jQuery-Plugin
+
+Navicon Transformicons
+http://sarasoueidan.com/demos/navicon-transformicons/
+
+Fixed Menu
+https://github.com/alexcican/lab/tree/gh-pages/teehan_lax_navigation
+
+OwlCarousel2
+https://github.com/OwlFonk/OwlCarousel2
+
+AntiSpam for Contact Form
+http://nfriedly.com/techblog/2009/11/how-to-build-a-spam-free-contact-forms-without-captchas/
+
+CSS Note Style
+http://codepen.io/kevingimbel/pen/LGcyd
+
+jQuery Validation Plugin
+http://jqueryvalidation.org/
+
+CollagePlus
+https://ed-lea.github.io/jquery-collagePlus/
+
+imagesLoaded
+https://github.com/desandro/imagesloaded
+
+FITVIDS.JS
+http://fitvidsjs.com/
+
+Modernizr
+https://modernizr.com/
