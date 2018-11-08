@@ -1,0 +1,6 @@
+.header {
+    width: 100%;
+    @include max-width();
+    padding-top: $endPadding;
+    flex-shrink: 0;
+}

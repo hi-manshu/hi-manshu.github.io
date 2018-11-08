@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Home</title>
+    <link rel="stylesheet" href="dist/css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="mainWrapper">
+        <header class="header">
+            <nav class="navbar">
+                <div class="header__logo">
+                    <img srcset="img/logo.png, img/logo-2x.png 2x, img/logo-3x.png 3x"
+                        src="img/logo.png"
+                        alt="Logo">
+                </div>
+            </nav>
+        </header>
+        <div class="heroWrapper">
+            <div class="heroWrapper__content">
+                <div class="heroWrapper__left">
+                    <h1 class="h1">We are a <strong class="heroWrapper__prominentText" id="prominent-text">product design</strong> studio led by two highly motivated designers.</h1>
+                    <h2 class="h2" id="we-should-talk">We Should Talk.</h2>
+                </div>
+                <div class="heroWrapper__right">
+                    <div class="heroWrapper__cards">
+                        <div class="heroWrapper__card cardWrapper cardWrapper--hidden cardWrapper--product" id="product-card" style="display: none;">
+                            <h4 class="h4">We create timeless products for all platforms.</h4>
+                            <div class="cardWrapper__divider"></div>
+                            <div class="cardWrapper__services">
+                                <div class="cardWrapper__service">Websites</div>
+                                <div class="cardWrapper__service">Mobile Apps</div>
+                                <div class="cardWrapper__service">Branding</div>
+                                <div class="cardWrapper__service">User Experience</div>
+                                <div class="cardWrapper__service">Web Apps</div>
+                                <div class="cardWrapper__service">User Interface</div>
+                            </div>
+                        </div>
+                        <div class="heroWrapper__card cardWrapper cardWrapper--social cardWrapper--hidden" id="social-card" style="display: none;">
+                            <h4 class="h4">We don’t charge for coffee & conversations.</h4>
+                            <div class="cardWrapper__divider"></div>
+                            <div class="cardWrapper__links">
+                                <a class="cardWrapper__link cardWrapper__link--gmail" href="mailto:atul@designdrug.co"><img srcset="img/icons/gmail.png, img/icons/gmail-2x.png 2x, img/icons/gmail-3x.png 3x" src="img/icons/gmail.png" alt="">atul@designdrug.co</a>
+                                <a class="cardWrapper__link cardWrapper__link--whatsapp" href="https://wa.me/919867069236?text=Hey%20DesignDrug,%20I%20have%20this%20awesome%20product%20idea.%20Let%27s%20talk"><img srcset="img/icons/whatsapp.png, img/icons/whatsapp-2x.png 2x, img/icons/whatsapp-3x.png 3x" src="img/icons/whatsapp.png" alt="">9867069236</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="heroWrapper__bottom" id="hero-wrapper-bottom">
+                    <div class="heroWrapper__slideTarget" id="slide-target">
+                        <img srcset="img/icons/arrow-up.png, img/icons/arrow-up-2x.png 2x, img/icons/arrow-up-3x.png 3x" src="img/icons/arrow-up.png" alt="">
+                    </div>
+                        <div class="swiper-container heroWrapper__bottomSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide heroWrapper__bottomSlideWrapper">
+                                    <div class="heroWrapper__bottomSlide" data-pos="1">
+                                        <h4 class="h4">We create timeless products for all platforms.</h4>
+                                        <div class="cardWrapper__divider"></div>
+                                        <div class="cardWrapper__services">
+                                            <div class="cardWrapper__service">Websites</div>
+                                            <div class="cardWrapper__service">Mobile Apps</div>
+                                            <div class="cardWrapper__service">Branding</div>
+                                            <div class="cardWrapper__service">User Experience</div>
+                                            <div class="cardWrapper__service">Web Apps</div>
+                                            <div class="cardWrapper__service">User Interface</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide heroWrapper__bottomSlideWrapper">
+                                    <div class="heroWrapper__bottomSlide" data-pos="2">
+                                        <h4 class="h4">We don’t charge for coffee & conversations.</h4>
+                                        <div class="cardWrapper__divider"></div>
+                                        <div class="cardWrapper__links">
+                                            <a class="cardWrapper__link cardWrapper__link--gmail" href="mailto:atul@designdrug.co"><img srcset="img/icons/gmail.png, img/icons/gmail-2x.png 2x, img/icons/gmail-3x.png 3x" src="img/icons/gmail.png" alt="">atul@designdrug.co</a>
+                                            <a class="cardWrapper__link cardWrapper__link--whatsapp" href="https://wa.me/919867069236?text=Hey%20DesignDrug,%20I%20have%20this%20awesome%20product%20idea.%20Let%27s%20talk"><img srcset="img/icons/whatsapp.png, img/icons/whatsapp-2x.png 2x, img/icons/whatsapp-3x.png 3x" src="img/icons/whatsapp.png" alt="">9867069236</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heroWrapper__bottomSliderNavigation" id="bottom-navigation">
+                            <div class="heroWrapper__bottomSliderNavTarget heroWrapper__bottomSliderNavTarget--active" data-pos="1"></div>
+                            <div class="heroWrapper__bottomSliderNavTarget" data-pos="2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer__content">
+                    <p class="footer__text">This is a temporary website. We’re brewing something RAD. 🔥</p>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

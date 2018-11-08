@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    flex-shrink: 0;
+    &__content {
+        width: 100%;
+        @include max-width();
+        padding-bottom: $endPadding;
+    }
+    &__text {
+        color: rgba(255,255,255,.5);
+        font-family: 'Gotham Book', sans-serif;
+        letter-spacing: .5px;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+}

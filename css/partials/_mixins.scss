@@ -1,0 +1,9 @@
+@mixin max-width {
+  max-width: 1156px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 1199px)  {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
