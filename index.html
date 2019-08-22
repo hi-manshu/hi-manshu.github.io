@@ -1,0 +1,316 @@
+<!doctype html>
+
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-light header-small" data-effect="slideUp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Himanshu Singh">
+    <meta name="keywords" content="personal, blog, html5">
+    <meta name="author" content="Himanshu Singh">
+    <title>Himanshu Singh</title>
+    
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png"/>
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.fluidbox/fluidbox.css">
+    <link rel="stylesheet" type="text/css" href="js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="js/selection-sharer/selection-sharer.css">
+    <link rel="stylesheet" type="text/css" href="css/rotate-words.css">
+    <link rel="stylesheet" type="text/css" href="css/align.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="js/shortcodes/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="css/768.css">
+    <link rel="stylesheet" type="text/css" href="css/992.css">
+
+    <!-- INITIAL SCRIPTS -->
+    <script src="js/modernizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("https://gist.githubusercontent.com/hi-manshu/0c318a8d912484b910ba68e9583d9f95/raw/5ed45a85ac1e96e801935b3c4453dffc0b62e525/blog.json", function (data) {                
+
+                var articles = [];      // THE ARRAY TO STORE JSON ITEMS.
+                var div = document.getElementById('articles');
+                $.each(data, function (index, value) {
+                    div.innerHTML = div.innerHTML +  "<article class='hentry post has-post-thumbnail'><div class='hentry-left'><div class='entry-date'>"+
+                        "<span class='day'>"+value.day+"</span>"+
+                        "<span class='month'>"+value.month+"</span>"+
+                        "<span class='year'>"+value.year+"</span></div>"+
+                        "<div class='featured-image' style='background-image:url("+value.imageUrl+")'></div></div>"+
+                        "<div class='hentry-middle'>"+
+                        "<h2 class='entry-title'><a href="+value.blogUrl+">"+value.name+"</a></h2></div>"+
+                        "<a class='post-link' href="+value.blogUrl+">"+value.name+"</a>"+
+                        "</article>";
+                    articles.push(value);       // PUSH THE VALUES INSIDE THE ARRAY.
+                });                
+            });
+        });
+    </script>
+
+</head>
+
+<body class="  ">
+
+    <!-- page -->
+    <div id="page" class="hfeed site">
+        
+        <!-- header -->
+        <header id="masthead" class="site-header" role="banner">
+ 			
+            
+            <!-- site-navigation -->
+            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                
+                
+                
+                <!-- layout-medium -->
+                <div class="layout-medium">
+                
+                    
+                    <a class="menu-toggle"><span class="lines"></span></a>
+                    
+                    <!-- nav-menu -->
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="#blogs">Check My Blogs</a></li>
+                        </ul>
+                    </div>                    
+                    <!-- site-title : image-logo -->
+                    
+                    <!-- site-title -->
+                    
+                    <!-- site-title : text-logo -->
+                    <!--<h1 class="site-title">
+                        <a href="/index.html" rel="home">
+                            Haley Dust
+                        </a>
+                    </h1>-->
+                    <!-- site-title -->
+                    
+                    <!-- search-container -->
+                    
+                    <!-- social-container -->
+                    <div class="social-container">
+                        <div class="textwidget">
+                            <a class="social-link facebook" href="https://www.facebook.com/scorpiey"></a>
+                            <a class="social-link twitter" href="https://www.twitter.com/hi_man_shoe"></a>
+                            <a class="social-link instagram" href="https://www.instagram.com/hi_man_shoe"></a>
+                            <a class="social-link github" href="https://www.github.com/hi-manshu"></a>
+                        </div>
+    
+                    </div>
+                    <!-- social-container -->
+        
+                </div>
+                <!-- layout-medium -->
+                
+            </nav>
+            <!-- site-navigation -->
+            
+            
+            
+            
+            
+            		
+        </header>
+        <!-- header -->
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+            <div class="layout-medium"> 
+            <div id="primary" class="content-area">
+             
+            
+                    <!-- site-content -->
+                    <div id="content" class="site-content" role="main"> <!-- .hentry -->
+                        <article class="hentry page">
+                            
+                                
+                            <!-- .entry-content -->
+                            <div class="entry-content intro" data-animation="rotate-1">
+                                
+                                
+                                
+                                <!-- .profile-image -->
+                                <div class="profile-image">
+                                    <img alt="profile" src="me/me.jpg"/>
+                                </div>  
+                                <!-- .profile-image -->
+                                
+                                
+                                <h2><em>Hi.</em> I am Himanshu</h2>
+                                <h3>I am a <strong>Android Dev</strong> <strong>Speaker</strong> <strong>Maniac</strong></h3>
+                                
+
+                                
+                       <!-- .link-boxes -->
+                                 <!-- .home-title -->
+                                 <h6 class="widget-title home-title">Open Source Libraries</h6> 
+                                 <figure id="background-boxes">
+                                     <a href="https://github.com/MindorksOpenSource/screenshot"></a>
+                                     <figcaption class="wp-caption-text">Screenshot</figcaption>
+                                 </figure>        
+                                 
+                                 <figure id="background-boxes">
+                                     <a href="https://github.com/MindorksOpenSource/EditDrawableText"></a>
+                                     <figcaption class="wp-caption-text">EditDrawableText</figcaption>
+                                 </figure> 
+                                 
+                                 <figure id="background-boxes">
+                                     <a href="https://github.com/MindorksOpenSource/ViewColorGenerator"></a>
+                                     <figcaption class="wp-caption-text">ViewColorGenerator</figcaption>
+                                 </figure> 
+                                 
+                                 <figure id="background-boxes">
+                                     <a href="https://github.com/MindorksOpenSource/RadialProgressBar"></a>
+                                     <figcaption class="wp-caption-text">RadialProgressBar</figcaption>
+                                 </figure> 
+                                 <!-- .link-boxes -->         
+                                     
+                                     
+                              </div> 
+                             <!-- .entry-content -->
+                                
+                                	
+                                    
+                         </article> 
+                         <!-- .page -->
+                                 
+                       <!-- .home-title -->
+                       <h3 class="widget-title home-title" id="blogs">LATEST FROM THE BLOG</h3>  
+                         
+                        
+                       <!-- BLOG SIMPLE -->
+                       <div id="articles" class="blog-simple">
+                                                    
+                       </div> 
+                      
+                               
+                                
+                    </div>
+                    <!-- site-content -->
+            
+            </div>
+                <!-- primary -->    
+            
+            
+            	
+            
+            
+            </div>
+            <!-- layout -->
+        
+        
+        </div>
+        <!-- site-main -->
+        
+        
+        
+        <!-- site-footer -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+			
+            <!-- layout-medium -->
+            <div class="layout-medium">
+            
+            	
+                <!-- site-title-wrap -->
+                <div class="site-title-wrap">
+                
+                
+                    <!-- site-title : text-logo -->
+                    <!--<h1 class="site-title">
+                        <a href="/index.html" rel="home">
+                            Jeff Winger
+                        </a>
+                    </h1>-->
+                    <!-- site-title -->
+                               
+                   
+                    
+                    <p class="site-description">Connect with me anytime 24*7</p>
+                
+                </div>
+                <!-- site-title-wrap -->
+                
+            	
+                <!-- footer-social -->
+                <div class="footer-social">
+                	
+                    <div class="textwidget">
+                        <a class="social-link facebook" href="https://www.facebook.com/scorpiey"></a>
+                        <a class="social-link twitter" href="https://www.twitter.com/hi_man_shoe"></a>
+                        <a class="social-link instagram" href="https://www.instagram.com/hi_man_shoe"></a>
+                        <a class="social-link github" href="https://www.github.com/hi-manshu"></a>
+
+                    </div>
+                    
+                </div>
+                <!-- footer-social -->
+                
+                
+                
+               
+            
+            </div>
+            <!-- layout-medium -->
+                
+                
+            <!-- .site-info -->
+            <div class="site-info">
+            	
+                <!-- layout-medium -->
+            	<div class="layout-medium">
+                
+            		<div class="textwidget">crafted <i class="pw-icon-heart"></i> <em>by</em> Himanshu Singh</div>
+                
+                </div>
+            	<!-- layout-medium -->
+            
+            </div>
+            <!-- .site-info -->
+            
+            
+            
+		</footer>
+        <!-- site-footer -->
+
+        
+	</div>
+    <!-- page -->
+    
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+	   if (!window.jQuery) { 
+		  document.write('<script src="js/jquery-3.1.1.min.js"><\/script>');
+	   }
+	</script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery.viewport.mini.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.fluidbox/jquery.fluidbox.min.js"></script>
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/selection-sharer/selection-sharer.js"></script>
+    <script src="js/socialstream.jquery.js"></script>
+    <script src="js/jquery.collagePlus/jquery.collagePlus.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shortcodes/shortcodes.js"></script>
+
+</body>
+</html>
