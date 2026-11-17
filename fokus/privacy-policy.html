@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Fokus Launcher</title>
+  <meta name="description" content="Privacy Policy for Fokus, the minimalist Android launcher by Himanshu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Fokus</a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a href="about.html">About</a>
+      </div>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.himanshoe.fokus" target="_blank" rel="noopener">Get the App</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="policy-hero">
+    <div class="container">
+      <span class="policy-badge">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p><strong>Fokus — Minimalist Launcher</strong> &nbsp;·&nbsp; com.himanshoe.fokus</p>
+      <p style="margin-top: 8px;">Developer: Himanshu &nbsp;·&nbsp; Last updated: March 2026</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="policy-content">
+
+    <h2>1. Overview</h2>
+    <p>Fokus ("the App") is an Android launcher that provides app time limits, Focus Shield (distraction blocking), Health Connect integration, on-device AI summaries, and a notification panel. This Privacy Policy explains what data the App accesses, how it is used, and what is never collected.</p>
+    <p>The App is designed with privacy as a core principle. Most features work entirely on-device. No personal data is sold or shared with third parties for advertising.</p>
+
+    <h2>2. Data the App Accesses</h2>
+
+    <h3>2.1 App Usage Statistics</h3>
+    <p><em>Permission: PACKAGE_USAGE_STATS</em></p>
+    <p>Android's UsageStats API provides aggregate screen-time data — which apps were used, for how long, and on which dates. This powers the Stats screen and Focus Shield time-limit enforcement.</p>
+    <p>Raw usage-stats data is never uploaded to any server. It is processed on-device and stored locally in a Room database. Data is cleared when the app is uninstalled.</p>
+
+    <h3>2.2 Installed Apps</h3>
+    <p><em>Permission: QUERY_ALL_PACKAGES</em></p>
+    <p>A list of all installed apps is required to populate the launcher home screen grid and let users configure Focus Shield rules. This data is held locally and never uploaded.</p>
+
+    <h3>2.3 Health Connect Data</h3>
+    <p>Fokus optionally reads from Health Connect to display a daily health summary. The following data types are read only if the user grants permission:</p>
+    <table>
+      <thead><tr><th>Data Type</th><th>Permission</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>Steps</td><td>READ_STEPS</td><td>Daily step count and goal progress</td></tr>
+        <tr><td>Distance</td><td>READ_DISTANCE</td><td>Daily distance walked/run</td></tr>
+        <tr><td>Calories</td><td>READ_TOTAL_CALORIES_BURNED</td><td>Daily calorie burn</td></tr>
+        <tr><td>Heart rate</td><td>READ_HEART_RATE</td><td>Average resting heart rate</td></tr>
+        <tr><td>Exercise</td><td>READ_EXERCISE</td><td>Workout summary</td></tr>
+        <tr><td>Sleep</td><td>READ_SLEEP</td><td>Sleep duration</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Key commitments:</strong> Health data is never uploaded to any server. It is never shared with third parties. It is processed exclusively on-device — including by the optional on-device AI summary powered by the Gemma 3 model running locally. Users can revoke Health Connect permissions at any time via the Health Connect app.</p>
+
+    <h3>2.4 Accessibility Service</h3>
+    <p><em>Permission: BIND_ACCESSIBILITY_SERVICE</em></p>
+    <p>Fokus registers an Accessibility Service exclusively for Focus Shield. Specifically:</p>
+    <ul>
+      <li><strong>Scroll limit enforcement</strong> — detects scroll events so the app can overlay Focus Shield when the configured limit is exceeded.</li>
+      <li><strong>Feature blocking</strong> — detects when a blocked feature (Shorts, Reels, Search, Comments) becomes visible and overlays Focus Shield before the content is viewed.</li>
+      <li><strong>Daily time limit enforcement</strong> — detects when a time-limited app comes to the foreground after its daily limit has been reached.</li>
+    </ul>
+    <p>The Accessibility Service does <strong>not</strong> read, record, store, or transmit any on-screen text, images, passwords, messages, or personal information. Window content is inspected only to identify which feature is active; the content itself is discarded immediately. The service is not used for analytics, advertising, or any purpose beyond the three Focus Shield functions described above.</p>
+
+    <h3>2.5 Notification Listener</h3>
+    <p><em>Permission: BIND_NOTIFICATION_LISTENER_SERVICE</em></p>
+    <p>Fokus registers a Notification Listener to power the in-app notification panel. Notification content (message body, sender name, text) is <strong>never</strong> logged, stored, or transmitted. Only the app package name is used for display. Notification data is processed in memory only and discarded when the notification is dismissed.</p>
+
+    <h3>2.6 Calendar</h3>
+    <p><em>Permission: READ_CALENDAR</em></p>
+    <p>Calendar events are optionally displayed in a home screen widget. Events are read from the device's CalendarProvider and displayed in the widget. They are not stored in the App's database and are never uploaded.</p>
+
+    <h3>2.7 Location</h3>
+    <p><em>Permission: ACCESS_COARSE_LOCATION</em></p>
+    <p>Coarse (city-level) location is used solely to fetch current weather conditions for the optional weather widget. The location is passed to one weather API request and is not stored. Precise location is never requested.</p>
+
+    <h3>2.8 Analytics — Firebase Analytics</h3>
+    <p><strong>What is collected:</strong> anonymised event names (e.g. screen views, feature interactions), whether a search returned results (boolean — query text is never logged), premium feature interactions.</p>
+    <p><strong>What is never collected:</strong> no names, emails, or PII; no notification content; no on-screen text; no Health Connect values; no search query text.</p>
+    <p>Firebase Analytics automatically anonymises IP addresses. Processed by Google LLC under their <a href="https://policies.google.com/privacy" style="color: var(--muted); text-decoration: underline; text-underline-offset: 3px;" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+    <h3>2.9 Crash Reporting — Firebase Crashlytics</h3>
+    <p>Crashlytics collects anonymised crash reports (stack traces, device model, OS version) to help diagnose bugs. No personal data is included in crash reports.</p>
+
+    <h3>2.10 Billing — RevenueCat</h3>
+    <p>Purchases are processed by Google Play Billing. RevenueCat receives an anonymised customer identifier and purchase record to manage Pro entitlements. No payment card data is accessible to the App or to RevenueCat. See <a href="https://www.revenuecat.com/privacy" style="color: var(--muted); text-decoration: underline; text-underline-offset: 3px;" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+
+    <h2>3. Data We Do Not Collect</h2>
+    <ul>
+      <li>Names, emails, phone numbers, or contact information</li>
+      <li>Photos, files, or documents</li>
+      <li>Clipboard content</li>
+      <li>SMS or call logs</li>
+      <li>Precise location</li>
+      <li>Biometric data beyond what Health Connect optionally provides on-device</li>
+      <li>Advertising identifiers used for targeted advertising</li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <table>
+      <thead><tr><th>Recipient</th><th>Data shared</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Google Firebase</td><td>Anonymised analytics, crash traces</td><td>App improvement and crash diagnosis</td></tr>
+        <tr><td>RevenueCat</td><td>Anonymised purchase records</td><td>Subscription and entitlement management</td></tr>
+        <tr><td>Weather API</td><td>City-level location (if weather widget enabled)</td><td>Fetching local weather</td></tr>
+        <tr><td>No other third parties</td><td>—</td><td>Data is not sold or shared for advertising</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Data Retention and Deletion</h2>
+    <ul>
+      <li><strong>Local data</strong> (app layout, time limits, usage history): retained until the app is uninstalled or the user clears app data.</li>
+      <li><strong>Analytics data</strong>: retained by Firebase per their data retention settings.</li>
+      <li><strong>To delete all local data:</strong> uninstall the App or go to Android Settings → Apps → Fokus → Clear Data.</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>Fokus is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>Depending on your jurisdiction you may have rights to access, correct, or delete your data. For any data-related requests, contact us at <a href="mailto:codewithhimanshoe@gmail.com" style="color: var(--muted); text-decoration: underline; text-underline-offset: 3px;">codewithhimanshoe@gmail.com</a>.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We will update this page when material changes occur. The "Last updated" date at the top reflects the most recent revision.</p>
+
+    <h2>9. Contact</h2>
+    <p><strong>Himanshu</strong><br />
+    Email: <a href="mailto:codewithhimanshoe@gmail.com" style="color: var(--muted); text-decoration: underline; text-underline-offset: 3px;">codewithhimanshoe@gmail.com</a><br />
+    GitHub: <a href="https://github.com/hi-manshu" style="color: var(--muted); text-decoration: underline; text-underline-offset: 3px;" target="_blank" rel="noopener">github.com/hi-manshu</a></p>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html">Fokus</a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/hi-manshu/fokus" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <span class="footer-copy">© 2026 Himanshu. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

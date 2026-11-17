@@ -1,0 +1,66 @@
+name: Build site from android-web-spark
+
+# This repo only holds the built site. The source is hi-manshu/android-web-spark;
+# this workflow builds it and commits the output to master, which GitHub Pages serves.
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays at 07:00 UTC, an hour after android-web-spark refreshes its Sessionize snapshot.
+    - cron: '0 7 * * 1'
+  repository_dispatch:
+    types: [deploy]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
+        with:
+          path: site
+
+      - name: Check out the source
+        uses: actions/checkout@v4
+        with:
+          repository: hi-manshu/android-web-spark
+          path: source
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: source/package-lock.json
+
+      - name: Install and build
+        working-directory: source
+        run: |
+          npm ci
+          npm run build
+
+      - name: Replace the published files
+        working-directory: site
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github ! -name krate ! -name README.md -exec rm -rf {} +
+          cp -R ../source/dist/. .
+          cp index.html 404.html   # GitHub Pages serves this for unknown paths, so client-side routes work
+          touch .nojekyll
+
+      - name: Commit and push if anything changed
+        working-directory: site
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Site is already up to date"; exit 0
+          fi
+          SHA=$(git -C ../source rev-parse --short HEAD)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Build site from hi-manshu/android-web-spark@${SHA}"
+          git push
