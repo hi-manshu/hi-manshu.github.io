@@ -1,1 +1,0 @@
-import{j as t}from"./index-DLz-eLn3.js";import{C as a}from"./ContactSection-CtJl77JX.js";import"./copy-CooJIk6Z.js";function s(){return t.jsxs("div",{className:"relative container py-10 md:py-14 max-w-5xl",children:[t.jsx("div",{className:"page-glow","aria-hidden":!0}),t.jsx(a,{standalone:!0})]})}export{s as default};

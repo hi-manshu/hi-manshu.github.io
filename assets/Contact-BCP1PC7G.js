@@ -1,0 +1,1 @@
+import{j as t}from"./index-C1SfRDEj.js";import{C as a}from"./ContactSection-BIYL691U.js";import"./copy-Cm7MIZYG.js";function s(){return t.jsxs("div",{className:"relative container py-10 md:py-14 max-w-5xl",children:[t.jsx("div",{className:"page-glow","aria-hidden":!0}),t.jsx(a,{standalone:!0})]})}export{s as default};
